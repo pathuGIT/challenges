@@ -12,13 +12,48 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    .parent{
+      height: 100vh;
+      border: 2px solid rgb(29, 216, 4);
+    }
+    .content-inside{
+      border: 1px solid yellow;
+      display: flex;
+      height: 100%;
+    }
+    .inside{
+      width: 50%;
+    }
+    .parent-image{
+      border: 1px solid black;
+      position: relative;
+      height: 100%; 
+    }
+    .Image{
+      border: 1px solid red;
+      position: absolute;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
   
-
-  <div class="content">
-    
+  <div class="parent">
+    <div class="content-inside">
+      <div class="inside parent-image">
+          <img class="Image" src="images/bg-pattern-desktop.svg" alt="">
+          <img class="Image" src="images/illustration-woman-online-desktop.svg" alt="">
+          <img class="Image" src="images/illustration-box-desktop.svg" alt="">
+      </div>
+      <div class="inside detail">
+        <p>Hello</p>
+      </div>
+    </div>
   </div>
 
 
