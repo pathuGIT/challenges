@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -16,6 +16,7 @@
       box-sizing: border-box;
       padding: 0;
       margin: 0;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .parent{
       height: 100vh;
@@ -34,10 +35,39 @@
       float: left;
     }
     .parent-image{
-      background-color: lightgreen;
     }
     .parent-image img{
       width: 100%;
+    }
+    .detail{
+      height: 100%;
+      padding: 0 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .faq{
+      border-top: 1px solid rgba(7, 7, 7, 0.438);
+      padding: 5px 0;
+    }
+    .first-faq{
+      border-top: none;
+    }
+    .faq:last-child{
+      border-bottom: 1px solid rgba(7, 7, 7, 0.438);
+    }
+    .faq-li{
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+    } 
+    .faq-li li{
+      border: 1px solid rgba(0, 0, 0, 0);
+      font-weight: 500;
+    }
+    .faq p{
+      font-size: 13px;
     }
     @media screen and (max-width:700px) {
       .content{
@@ -51,6 +81,9 @@
         max-width: 400px;
         margin: 0 auto;
       }
+      .detail{
+        height: auto;
+      }
     }
   </style>
 </head>
@@ -62,7 +95,55 @@
           <img class="Image" src="images/illustration-woman-online-desktop.svg" alt="">
       </div>
       <div class="inside detail">
-        <p>Hello</p>
+        <div class="faq-parent">
+        <h2 style="margin-bottom: 30px; ">FAQ</h2>
+
+        <div class="faq first-faq">
+          <div class="faq-li">
+            <li>How many team members can i invite?</li>
+            <li id="rw1"><i class="fa fa-angle-down"></i></li>
+          </div>
+          <div class="faq-sh1">
+            <p>Team member invitation limits vary by platform; check your specific service for details.</p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-li">
+            <li>What is the maximum file upload size?</li>
+            <li id="rw2"><i class="fa fa-angle-down"></i></li>
+          </div>
+          <div class="faq-sh2">
+            <p>Team member invitation limits vary by platform; check your specific service for details.</p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-li">
+            <li>How do i reset my password?</li>
+            <li id="rw3"><i class="fa fa-angle-down"></i></li>
+          </div>
+          <div class="faq-sh3">
+            <p>Team member invitation limits vary by platform; check your specific service for details.</p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-li">
+            <li>Can i canse my subscription?</li>
+            <li id="rw4"><i class="fa fa-angle-down"></i></li>
+          </div>
+          <div class="faq-sh4">
+            <p>Team member invitation limits vary by platform; check your specific service for details.</p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-li">
+            <li>Do you provide additional support?</li>
+            <li id="rw5"><i class="fa fa-angle-down"></i></li>
+          </div>
+          <div class="faq-sh5">
+            <p>Team member invitation limits vary by platform; check your specific service for details.</p>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -72,5 +153,38 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script>
+    $(document).ready(function(){
+      $('.faq-sh1').hide();
+      $("#rw1").click(function(){
+        $('.faq-sh1').fadeToggle();
+      });
+    });
+    $(document).ready(function(){
+      $('.faq-sh2').hide();
+      $("#rw2").click(function(){
+        $('.faq-sh2').fadeToggle();
+      });
+    });
+    $(document).ready(function(){
+      $('.faq-sh3').hide();
+      $("#rw3").click(function(){
+        $('.faq-sh3').fadeToggle();
+      });
+    });
+    $(document).ready(function(){
+      $('.faq-sh4').hide();
+      $("#rw4").click(function(){
+        $('.faq-sh4').fadeToggle();
+      });
+    });
+    $(document).ready(function(){
+      $('.faq-sh5').hide();
+      $("#rw5").click(function(){
+        $('.faq-sh5').fadeToggle();
+      });
+    });
+  </script>
 </body>
 </html>
