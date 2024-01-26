@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   background-color: hsl(185, 75%, 39%);
-  background-image: url("/profile-card-component-main/images/bg-pattern-bottom.svg");
+  background-image: url("images/bg-pattern-bottom.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
