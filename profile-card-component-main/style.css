@@ -1,0 +1,59 @@
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400, 700;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(185, 75%, 39%);
+  background-image: url("/profile-card-component-main/images/bg-pattern-bottom.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container .card {
+  overflow: hidden;
+  border-radius: 15px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.container .card .card-up {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container .card .card-up .top-bg {
+  height: 150px;
+}
+.container .card .card-up .down-bg {
+  height: 150px;
+  text-align: center;
+  padding: 70px;
+}
+.container .card .card-up .profile {
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.container .card .card-down {
+  border-top: 1px solid grey;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.container .card .card-down .box {
+  padding: 10px;
+  text-align: center;
+}
+.container .card .card-down .box span {
+  font-size: smaller;
+}/*# sourceMappingURL=style.css.map */
